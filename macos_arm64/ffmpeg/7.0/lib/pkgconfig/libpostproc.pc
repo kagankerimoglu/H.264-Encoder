@@ -1,0 +1,14 @@
+prefix=/opt/homebrew/Cellar/ffmpeg/7.0
+exec_prefix=${prefix}
+libdir=/opt/homebrew/Cellar/ffmpeg/7.0/lib
+includedir=/opt/homebrew/Cellar/ffmpeg/7.0/include
+
+Name: libpostproc
+Description: FFmpeg postprocessing library
+Version: 58.1.100
+Requires: 
+Requires.private: libavutil >= 59.8.100
+Conflicts:
+Libs: -L${libdir}  -lpostproc 
+Libs.private: -lm
+Cflags: -I${includedir}
