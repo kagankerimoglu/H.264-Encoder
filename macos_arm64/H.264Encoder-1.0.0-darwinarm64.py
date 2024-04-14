@@ -157,7 +157,7 @@ def check_for_updates():
         checkforupdates_window.update()
 
         # Make a request to the server to get the latest version information
-        response = requests.get("https://raw.githubusercontent.com/kagankerimoglu/Test/main/version.json")
+        response = requests.get("https://raw.githubusercontent.com/kagankerimoglu/H.264-Encoder/main/version.json")
 
         progress_bar_checkupdate["value"] = 50
         checkforupdates_window.update()
@@ -193,18 +193,18 @@ def check_for_updates():
                 if result:
                     # Open the download link for the update in a web browser
                     if systeminfo == "Darwinarm64":
-                        webbrowser.open_new(f"https://github.com/kagankerimoglu/Test/releases/download/v{latest_version}/testfileupdate_{latest_version}_macos_arm64.dmg")
-                        webbrowser.open_new(f"https://github.com/kagankerimoglu/Test/releases/tag/v{latest_version}")
+                        webbrowser.open_new(f"https://github.com/kagankerimoglu/H.264-Encoder/releases/download/v{latest_version}/H.264Encoder-{latest_version}-darwinarm64.txt")
+                        webbrowser.open_new(f"https://github.com/kagankerimoglu/H.264-Encoder/releases/tag/v{latest_version}")
                     if systeminfo == "Darwinx86_64":
-                        webbrowser.open_new(f"https://github.com/kagankerimoglu/Test/releases/download/v{latest_version}/testfileupdate_{latest_version}_macos_arm64.dmg")
-                        webbrowser.open_new(f"https://github.com/kagankerimoglu/Test/releases/tag/v{latest_version}")                        
+                        webbrowser.open_new(f"https://github.com/kagankerimoglu/H.264-Encoder/releases/download/v{latest_version}/H.264Encoder-{latest_version}-darwinarm64.txt")
+                        webbrowser.open_new(f"https://github.com/kagankerimoglu/H.264-Encoder/releases/tag/v{latest_version}")                   
 
     except:
         messagebox.showinfo("Info", "Update Failed!\n\nPlease Try Later\nor\nContact Support")
         checkforupdates_window.destroy()
 
 def check_for_updates_at_start():
-    response = requests.get("https://raw.githubusercontent.com/kagankerimoglu/h.264-encoder/main/version.json")
+    response = requests.get("https://raw.githubusercontent.com/kagankerimoglu/H.264-Encoder/main/version.json")
     if response.status_code == 200:
         version_info = response.json()
         latest_version = version_info.get("version")
@@ -218,11 +218,11 @@ def check_for_updates_at_start():
             systeminfo = operating_system+processortype
             if result:
                 if systeminfo == "Darwinarm64":
-                    webbrowser.open_new(f"https://github.com/kagankerimoglu/Test/releases/download/v{latest_version}/testfileupdate_{latest_version}_macos_arm64.dmg")
-                    webbrowser.open_new(f"https://github.com/kagankerimoglu/Test/releases/tag/v{latest_version}")
+                    webbrowser.open_new(f"https://github.com/kagankerimoglu/H.264-Encoder/releases/download/v{latest_version}/H.264Encoder-{latest_version}-darwinarm64.txt")
+                    webbrowser.open_new(f"https://github.com/kagankerimoglu/H.264-Encoder/releases/tag/v{latest_version}")
                 if systeminfo == "Darwinx86_64":
-                    webbrowser.open_new(f"https://github.com/kagankerimoglu/Test/releases/download/v{latest_version}/testfileupdate_{latest_version}_macos_arm64.dmg")
-                    webbrowser.open_new(f"https://github.com/kagankerimoglu/Test/releases/tag/v{latest_version}")  
+                    webbrowser.open_new(f"https://github.com/kagankerimoglu/H.264-Encoder/releases/download/v{latest_version}/H.264Encoder-{latest_version}-darwinarm64.txt")
+                    webbrowser.open_new(f"https://github.com/kagankerimoglu/H.264-Encoder/releases/tag/v{latest_version}") 
 
 ############################################## GUI CONFIGURATION ##############################################
 
